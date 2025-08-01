@@ -50,7 +50,28 @@ export const ChatSidebar = ({
       {/* Chat List */}
       <ScrollArea className="flex-1 p-2">
         <div className="space-y-1">
-          {chats.map(chat => {})}
+          {chats.map(chat => (
+            <div
+              key={chat.id}
+              onClick={() => onSelectChat(chat.id)}
+              className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-colors group ${
+                selectedChatId === chat.id 
+                  ? 'bg-sidebar-accent text-sidebar-accent-foreground' 
+                  : 'hover:bg-sidebar-accent/50 text-sidebar-foreground'
+              }`}
+            >
+              <MessageSquareIcon className="h-4 w-4 flex-shrink-0" />
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-medium truncate">{chat.title}</p>
+                <p className="text-xs text-sidebar-foreground/60">{chat.timestamp}</p>
+              </div>
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                <Button variant="ghost" size="sm" className="h-auto p-1">
+                  <MoreHorizontalIcon className="h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+          ))}
         </div>
       </ScrollArea>
 
