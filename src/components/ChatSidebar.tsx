@@ -17,27 +17,7 @@ export const ChatSidebar = ({
   onSelectChat,
   selectedChatId
 }: ChatSidebarProps) => {
-  const [chats] = useState<ChatItem[]>([{
-    id: '1',
-    title: 'Welcome to Chatoff',
-    timestamp: 'Today'
-  }, {
-    id: '2',
-    title: 'Getting started guide',
-    timestamp: 'Yesterday'
-  }, {
-    id: '3',
-    title: 'API Integration help',
-    timestamp: '2 days ago'
-  }, {
-    id: '4',
-    title: 'React component design',
-    timestamp: '3 days ago'
-  }, {
-    id: '5',
-    title: 'Database optimization',
-    timestamp: '1 week ago'
-  }]);
+  const [chats] = useState<ChatItem[]>([]);
   return <div className="w-64 bg-sidebar border-r border-sidebar-border flex flex-col h-full">
       {/* Header */}
       <div className="p-4 border-b border-sidebar-border">
