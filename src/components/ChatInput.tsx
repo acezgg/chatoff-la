@@ -67,11 +67,6 @@ export const ChatInput = ({ onSendMessage, isLoading = false }: ChatInputProps) 
           </Button>
         </div>
         
-        <div className="mt-2 flex items-center justify-center">
-          <p className="text-xs text-muted-foreground">
-            Chatoff can make mistakes. Consider checking important information.
-          </p>
-        </div>
       </div>
     </div>
   );
