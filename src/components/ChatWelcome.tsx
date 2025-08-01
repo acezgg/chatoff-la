@@ -32,13 +32,11 @@ export const ChatWelcome = ({
       <div className="max-w-2xl w-full text-center space-y-8">
         <div className="space-y-4">
           <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto">
-            <span className="text-2xl font-bold text-primary-foreground">C</span>
+            <span className="text-2xl font-bold text-primary-foreground">CO</span>
           </div>
           <div>
-            <h1 className="text-3xl font-bold text-foreground mb-2">What can I help with?</h1>
-            <p className="text-muted-foreground">
-              Start a conversation below or try one of these examples
-            </p>
+            <h1 className="text-3xl font-bold text-foreground mb-2">Start a Chat!</h1>
+            
           </div>
         </div>
 
