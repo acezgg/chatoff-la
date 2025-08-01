@@ -42,9 +42,25 @@ export const ChatWelcome = ({
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {suggestions.map((suggestion, index) => {
-          const Icon = suggestion.icon;
-          return;
-        })}
+            const Icon = suggestion.icon;
+            return (
+              <Card 
+                key={index}
+                className="p-4 cursor-pointer hover:bg-chat-message-user/5 transition-colors border border-border/50"
+                onClick={() => onStartChat(suggestion.prompt)}
+              >
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Icon className="h-4 w-4 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-medium text-foreground mb-1">{suggestion.title}</h3>
+                    <p className="text-sm text-muted-foreground">{suggestion.description}</p>
+                  </div>
+                </div>
+              </Card>
+            );
+          })}
         </div>
 
         <div className="text-xs text-muted-foreground">

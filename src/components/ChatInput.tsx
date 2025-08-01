@@ -34,7 +34,7 @@ export const ChatInput = ({ onSendMessage, isLoading = false }: ChatInputProps) 
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="Message Chatoff..."
+              placeholder="Message..."
               className="min-h-[52px] max-h-[200px] resize-none bg-chat-input border-chat-input-border focus:border-primary focus:ring-1 focus:ring-primary rounded-xl px-4 py-3 pr-12"
               disabled={isLoading}
             />
