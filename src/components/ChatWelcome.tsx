@@ -42,9 +42,6 @@ export const ChatWelcome = ({
 
         
 
-        <div className="text-xs text-muted-foreground">
-          Chatoff can make mistakes. Consider checking important information.
-        </div>
       </div>
     </div>;
 };
